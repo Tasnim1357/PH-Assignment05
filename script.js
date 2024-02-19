@@ -5,7 +5,7 @@ const phone=document.getElementById('phone');
 
 
 
-function check(){
+function checkb(){
   const btnClicked= Array.from(buttons).some(btn => btn.classList.contains('selected'));
   const inputFill = phone.value.trim() !== '';
   nextButton.disabled = !(btnClicked && inputFill);
@@ -44,7 +44,7 @@ for(let btn of buttons){
           //  Next Button disable Check
 
             btn.classList.add('selected');
-            check();
+            checkb();
 
 
           
@@ -60,7 +60,7 @@ for(let btn of buttons){
 
 //  Next Button disable Check
 phone.addEventListener('input',function(){
-  check();
+  checkb();
 });
 
 // Apply Button Check
